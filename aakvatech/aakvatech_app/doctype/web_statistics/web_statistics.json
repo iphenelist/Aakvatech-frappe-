@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-14 18:47:28.272291",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "number_of_employees",
+  "column_break_xfscf",
+  "annual_invoices",
+  "section_break_gw8nr",
+  "number_of_skus",
+  "column_break_begn8",
+  "number_of_warehouses"
+ ],
+ "fields": [
+  {
+   "fieldname": "number_of_employees",
+   "fieldtype": "Int",
+   "label": "Number of Employees"
+  },
+  {
+   "fieldname": "annual_invoices",
+   "fieldtype": "Int",
+   "label": "Annual Invoices"
+  },
+  {
+   "fieldname": "number_of_skus",
+   "fieldtype": "Int",
+   "label": "Number of SKUs"
+  },
+  {
+   "fieldname": "number_of_warehouses",
+   "fieldtype": "Int",
+   "label": "Number of Warehouses"
+  },
+  {
+   "fieldname": "column_break_xfscf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_gw8nr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_begn8",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-11-14 18:48:25.735479",
+ "modified_by": "Administrator",
+ "module": "aakvatech app",
+ "name": "Web Statistics",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
