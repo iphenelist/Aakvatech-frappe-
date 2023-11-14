@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include aakvatech *.css
+recursive-include aakvatech *.csv
+recursive-include aakvatech *.html
+recursive-include aakvatech *.ico
+recursive-include aakvatech *.js
+recursive-include aakvatech *.json
+recursive-include aakvatech *.md
+recursive-include aakvatech *.png
+recursive-include aakvatech *.py
+recursive-include aakvatech *.svg
+recursive-include aakvatech *.txt
+recursive-exclude aakvatech *.pyc
