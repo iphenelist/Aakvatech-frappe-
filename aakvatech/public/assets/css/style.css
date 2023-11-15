@@ -9,8 +9,13 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+*{
+    font-family: "Josefin Sans", Brandon Grotesque;
+    font-size: 14px;
+}
 body {
   font-family: "Josefin Sans", Brandon Grotesque;
+  font-size: 14px;
   color: #444;
 }
 

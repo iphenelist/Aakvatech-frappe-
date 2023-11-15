@@ -56,87 +56,19 @@
 
         <div class="testimonials-carousel swiper">
           <div class="swiper-wrapper">
+            {% set timeline_list = frappe.get_all("AV Timeline", order_by="creation asc") %}
+            {% for timeline in timeline_list %}
+                {% set doc = frappe.get_doc("AV Timeline", timeline.name) %}
             <div class="testimonial-item swiper-slide">
               <img src="/assets/aakvatech/assets/img/operation.png" class="testimonial-img" alt="">
-              <h3>January 1, 2019</h3>
+              <h3>{{ frappe.format_date(doc.date) }}</h3>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Operationalised
+                {{ doc.timeline }}
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
-
-            <div class="testimonial-item swiper-slide">
-              <img src="/assets/aakvatech/assets/img/undraw_runner_start_x-0-uu.svg" class="testimonial-img" alt="">
-              <h3>February 1, 2019</h3>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                First Customer Onboarded
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-            <div class="testimonial-item swiper-slide">
-              <img src="/assets/aakvatech/assets/img/erpp.png" class="testimonial-img" alt="">
-              <h3>April 15, 2019</h3>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Became ERPNext Partner
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-            <div class="testimonial-item swiper-slide">
-              <img src="/assets/aakvatech/assets/img/10.jpeg" class="testimonial-img" alt="">
-              <h3>March 31, 2020</h3>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                10 Successful ERP Implementation
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-            <div class="testimonial-item swiper-slide">
-              <img src="/assets/aakvatech/assets/img/20.jpeg" class="testimonial-img" alt="">
-              <h3>September 30, 2020</h3>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                20 Successful ERP Implementation
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-            <div class="testimonial-item swiper-slide">
-              <img src="/assets/aakvatech/assets/img/erpp.png" class="testimonial-img" alt="">
-              <h3>August 1, 2021</h3>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Became Silver Partner
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-
-            <div class="testimonial-item swiper-slide">
-              <img src="/assets/aakvatech/assets/img/ERP.png" class="testimonial-img" alt="">
-              <h3>July 18, 2022</h3>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Became Gold Partner
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-
-            <div class="testimonial-item swiper-slide">
-              <img src="/assets/aakvatech/assets/img/50.jpeg" class="testimonial-img" alt="">
-              <h3>October 31, 2022</h3>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                50 Successful ERP Implementation
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
+            {% endfor %}
 
           </div>
           <div class="swiper-pagination"></div>
